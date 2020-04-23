@@ -2,8 +2,8 @@ trigger:
 - '*'
 
 variables:
-  buildConfiguration: 'Release-pipeline'
-  releaseBranchName: 'release-pipeline'
+  buildConfiguration: 'Release'
+  releaseBranchName: 'release'
 
 stages:
 - stage: 'Build'
@@ -81,7 +81,7 @@ stages:
       vmImage: 'ubuntu-16.04'
     environment: dev
     variables:
-    - group: Release-pipeline
+    - group: Release
     strategy:
       runOnce:
         deploy:
